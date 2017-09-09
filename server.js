@@ -26,8 +26,13 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/mongolab-perpendicular-39831");
+// mongoose.connect("mongodb://localhost/mongolab-perpendicular-39831");
+mongoose.connect("mongodb://heroku_w8g7x34p:sr7am1ec3duh5k9495qbi8c5a2@ds139360.mlab.com:39360/heroku_w8g7x34p");
 var db = mongoose.connection;
+
+
+
+
 
 db.on("error", function(error) {
   console.log("Mongoose Error: ", error);
